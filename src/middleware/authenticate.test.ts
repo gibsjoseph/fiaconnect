@@ -37,7 +37,7 @@ describe('Authentication', () => {
 
   const token = jwt.sign({ iss: publicKey, sub: accountAddress }, privateKeyPem, {
     algorithm: 'ES256',
-    expiresIn: '5000m'
+    expiresIn: '500m'
   })
 
   console.log('--------token----------')
