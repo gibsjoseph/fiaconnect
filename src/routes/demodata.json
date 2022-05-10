@@ -1,0 +1,48 @@
+
+GET /quote/out(in)
+
+POST /kyc/:kycSchema
+GET /kyc/:kycSchema/status
+DELETE /kyc/:kycSchema
+{
+    "firstName":"",
+    "middleName":"",
+    "lastName":"",
+    "dateOfBirth": {
+          "day":"",
+          "month": "",
+          "year": ""
+        },
+    "address": {
+          "address1":"",
+          "address2":"",
+          "isoCountryCode":"",
+          "isoRegionCode":"",
+          "city":"",
+          "postalCode":""
+        },
+    "phoneNumber":"",
+    "selfieDocument":"",
+    "identificationDocument":""
+},
+
+POST /accounts/:fiatAccountSchema
+GET /accounts
+DELETE /accounts/:fiatAccountId
+{
+  "institutionName":"Chase",
+  "accountName": "Checking Account",
+  "accountNumber": "12533986",
+  "country": "US",
+  "fiatAccountType": "BankAccount"
+}
+
+POST /transfer/out(in)
+GET /transfer/:transferId/status
+{
+    "fiatType": "USD",
+    "cryptoType": "cUSD",
+    "amount": "5.0",
+    "fiatAccountId": "12358",
+    "quoteId": "mock_quote_id"
+}
