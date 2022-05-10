@@ -583,7 +583,7 @@ describe('Authentication', () => {
         const response = await request(app)
           .get('/')
           .set('Authorization', `Bearer ${token}`)
-        expect(response.status).toEqual(40000)
+        expect(response.status).toEqual(400)
         expect(response.body).toEqual({
           error: 'Expiration time is set too far into the future. (>24 hours)',
         })
